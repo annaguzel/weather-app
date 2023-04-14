@@ -6,7 +6,8 @@ const TodayWeather = ({ data, metric }) => {
     <div className="weather">
       <div className="top">
         <div>
-          <p className="city">{data.city}</p>
+          <p className="city">{data?.name}</p>
+          <p className="country">{data?.sys?.country}</p>
           <p className="weather-description">
             {data?.weather?.[0].description}
           </p>

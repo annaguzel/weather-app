@@ -22,7 +22,13 @@
   margin: 0;
   letter-spacing: 1px;
 }
-
+.country {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+  margin: 8px 0;
+  letter-spacing: 1px;
+}
 .weather-description {
   font-weight: 400;
   font-size: 14px;

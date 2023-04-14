@@ -17,13 +17,15 @@ const Forecast = ({ data, metric }) => {
     WEEK_DAYS.slice(0, dayInAWeek)
   );
 
+  const forecastData = data ? data.slice(0, 7) : [];
+
   return (
     <>
       <div className="title-wrapper">
         <h1 className="title">Weather forecast</h1>
       </div>
-      {data?.list?.splice(0, 7).map((item, idx) => (
-        <>
+      {forecastData.map((item, idx) => (
+        <React.Fragment key={item.dt}>
           <div className="daily-item">
             <img
               src={`icons/${item.weather[0].icon}.png`}
@@ -66,7 +68,7 @@ const Forecast = ({ data, metric }) => {
               </label>
             </div>
           </div>
-        </>
+        </React.Fragment>
       ))}
     </>
   );
